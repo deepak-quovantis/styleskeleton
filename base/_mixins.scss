@@ -1,0 +1,60 @@
+//MARGINS
+@mixin el-margin($value, $dir:All)
+{
+  @if($dir == All){
+    margin: $value;
+  } 
+  @else if($dir == top){
+    margin-top: $value;
+  } 
+  @else if($dir == right){
+    margin-right: $value;
+  } 
+  @else if($dir == bottom){
+    margin-bottom: $value;
+  } 
+  @else if($dir == left){
+    margin-left: $value;
+  }
+}
+
+//PADDING
+@mixin el-padding($value, $dir:All)
+{
+  @if($dir == All){
+    padding: $value;
+  } 
+  @else if($dir == top){
+    padding-top: $value;
+  } 
+  @else if($dir == right){
+    padding-right: $value;
+  } 
+  @else if($dir == bottom){
+    padding-bottom: $value;
+  } 
+  @else if($dir == left){
+    padding-left: $value;
+  }
+}
+
+//BORDER
+@mixin border($width,$type,$color,$dir:All){
+  @if($dir == top){
+    border-top:$width $type $color;
+  }
+  @else if($dir == right){
+    border-right:$width $type $color;
+  }
+  @else if($dir == bottom){
+    border-bottom:$width $type $color;
+  }
+  @else if($dir == left){
+    border-left:$width $type $color;
+  }
+  @else { //By Default
+    border:$width $type $color;
+  }
+}
+
+
