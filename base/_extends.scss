@@ -1,5 +1,7 @@
+@import "variables";
+
 //FONT SIZES
-@for $i from 8 through 50 {
+@for $i from $minFontSize through $maxFontSize {
   .font-#{$i} {
         font-size:#{$i}px;
     }
