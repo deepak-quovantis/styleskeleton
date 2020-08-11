@@ -57,4 +57,13 @@
   }
 }
 
+//BORDER RADIUS
+@mixin border-radius($topLeft, $topRight:$topLeft, $bottomRight:$topLeft, $bottomLeft:$topRight){
+  border-radius: $topLeft $topRight $bottomRight $bottomLeft;
+}
+
+//BOX-SHADOW
+@mixin box-shadow($horizontal-length, $vertical-length, $blur, $spread, $color){
+  box-shadow: $horizontal-length $vertical-length $blur $spread $color;
+}
 
