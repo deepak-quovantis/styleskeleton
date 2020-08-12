@@ -1,8 +1,11 @@
-$minFontSize:8;
-$maxFontSize:50;
+//FONT SIZES RANGE
+$fontSizeRange:( 
+    min:8, 
+    max:50 
+);
 
 //COLORS
 $color :(
     primary:#f24343,
     secondary: #f9b520
-)
+);
