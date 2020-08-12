@@ -1,18 +1,9 @@
 @import "variables";
 
 //FONT SIZES
-@for $i from $minFontSize through $maxFontSize {
+@for $i from map-get($fontSizeRange, min) through map-get($fontSizeRange, max) {
   .font-#{$i} {
         font-size:#{$i}px;
     }
 }
-
-/* 
-==================================== 
-How to use
-<p class="font-xxx">some text</p>
-
-xxx: can be any number b/w 8-50
-====================================  
-*/
 
