@@ -1,7 +1,8 @@
+@import "variables";
+
 //FONT SIZES
-$fonts : 10, 12, 14, 16, 16, 18, 20, 30, 40;
-@each $font in $fonts {
-  .font-#{$font}{
-    font-size: $font + 'px';
-  }
+@for $i from map-get($fontSizeRange, min) through map-get($fontSizeRange, max) {
+  .font-#{$i} {
+        font-size:#{$i}px;
+    }
 }
