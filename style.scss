@@ -1,0 +1,14 @@
+@import 'base/variables';
+@import 'vendor/fonts';
+
+
+html,body{
+    font-family: 'Open Sans';
+}
+
+h1{
+    font-weight: map-get($font-weight, bold);
+}
+p{
+    font-weight: map-get($font-weight, light);
+}
