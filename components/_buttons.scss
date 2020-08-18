@@ -1,0 +1,52 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+
+/* 
+'btn' is a mixin need to place values in order to add
+mixins parameter is used in a sequence and need to be update in a same format only- sequence mentioned below
+padding, background-color, font-size, border-radius, text-color, border-color
+if any of the option you dont want to pass any value, follow to instruction
+if you dont want to use any color use transparent and for any value you can pass 0
+*/
+
+.success-btn{
+  @include btn(12px 20px, map-get($color, primary), 16px, 5px, #fff, transparent);
+  &:hover{
+    background: map-get($color, primary-hover);
+  }
+}
+
+.secondary-btn{
+  @include btn(12px 20px, map-get($color, secondary-hover), 16px, 5px, #fff, transparent);
+  &:hover{
+    background:  map-get($color, secondary-hover);
+  }
+}
+
+.cancel-btn{
+  @include btn(12px 20px, #fff, 16px, 5px, map-get($color, cancel-btn-text), #4E4C70);
+  border: 1px solid map-get($color, cancel-btn-color);
+  &:hover{
+    background-color: rgba(94,70,182,0.1);
+    color: map-get($color, cancel-btn-color);
+    border: 1px solid map-get($color, cancel-btn-color);
+
+  }
+}
+// for large btn - change the properties like padding, background-color, font-size, border-radius, color, border-color
+
+.success-btn.large,
+.cancel-btn.large,
+.secondary-btn.large{
+  @include btn(12px 30px,'', 26px, 5px, #fff, transparent);
+}
+
+.success-btn:disabled,
+.secondary-btn:disabled,
+.cancel-btn:disabled{
+  border: 1px solid;
+    @include disable(rgba(193,192,206,0), #C1C0CE, #C1C0CE);
+  }
+
+
