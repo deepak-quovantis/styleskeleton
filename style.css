@@ -64,14 +64,14 @@ if you dont want to use any color use transparent and for any value you can pass
   background: #fff;
   font-size: 16px;
   border-radius: 5px;
+  color: #4E4C70;
   border-color: #4E4C70;
   cursor: pointer;
   border: 0;
-  border: 1px solid #4E4C70; }
+  border: 1px solid; }
   .cancel-btn:hover {
     background-color: rgba(94, 70, 182, 0.1);
-    color: #4E4C70;
-    border: 1px solid #4E4C70; }
+    border: 1px solid; }
 
 .success-btn.large,
 .cancel-btn.large,
@@ -107,18 +107,19 @@ if you dont want to use any color use transparent and for any value you can pass
   top: 0;
   width: 300px;
   height: 100%;
-  background-color: gray;
-  padding: 30px; }
+  background-color: #2d2d2d; }
   .wrapper .side-nav ul {
-    margin: 0;
+    margin: 20px 0 0;
     padding: 0;
     list-style: none; }
     .wrapper .side-nav ul li {
       display: block; }
       .wrapper .side-nav ul li a {
         text-decoration: none;
-        font-size: 14px;
-        color: #ffffff; }
+        font-size: 16px;
+        color: #ffffff;
+        display: block;
+        padding: 15px 20px; }
         .wrapper .side-nav ul li a:hover {
           text-decoration: underline; }
 .wrapper .content {
@@ -127,15 +128,16 @@ if you dont want to use any color use transparent and for any value you can pass
   height: 100%; }
 .wrapper .topic .topic-title {
   font-size: 24px;
-  margin-bottom: 5px; }
+  margin-bottom: 15px; }
 .wrapper .code-snippet {
   background-color: lightgrey;
   border: 1px solid grey;
   border-radius: 4px;
-  padding: 10px; }
+  padding: 10px;
+  font-size: 14px; }
 
 html, body {
-  font-family: 'Open Sans'; }
+  font-family: sans-serif; }
 
 h1 {
   font-weight: 700; }
@@ -143,11 +145,10 @@ h1 {
 p {
   font-weight: 300; }
 
-/*# sourceMappingURL=style.css.map */
-
 .glyph.fs1 {
+  font-size: 20px;
+  width: 45%;
   display: inline-block;
-  width: 49%;
-  font-size: 30px;
-  padding: 12px 0;
-}
+  padding: 10px 0; }
+
+/*# sourceMappingURL=style.css.map */
