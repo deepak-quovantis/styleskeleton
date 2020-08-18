@@ -9,6 +9,10 @@
     box-sizing: border-box;
 }
 
+html,body{
+    font-family: $baseFontFamily;
+}
+
 .input-field{
     padding: 5px;
     @include placeholder{
@@ -69,14 +73,12 @@
 }
 
 
-html,body{
-    font-family: 'Open Sans';
+.fontFamilySection-p1{
+    font-family: $baseFontFamily;
+    font-weight: map-get($font-weight, extra-bold);
 }
-
-h1{
-    font-weight: map-get($font-weight, bold);
-}
-p{
+.fontFamilySection-p2{
+    font-family: $baseFontFamily;
     font-weight: map-get($font-weight, light);
 }
 
