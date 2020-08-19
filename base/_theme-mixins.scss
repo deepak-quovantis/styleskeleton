@@ -1,0 +1,14 @@
+// arguments to be pass
+// 1. Main theme color or background
+// 2. text color white
+// 3. text-color black
+// 4. Themes shades
+
+@mixin theme($theme-name, $text-color, $theme-shades: ()) {
+    .success-btn {
+        background-color: $theme-name;
+        &:hover {
+            background: map-get($color, primary-hover);
+        }
+    }
+}

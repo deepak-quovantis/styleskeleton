@@ -11,7 +11,11 @@ $color :(
     primary-hover: #ef2121,
     secondary-hover:#f9af0d,
     ghost-btn-text-color: #4E4C70,
-    active:#5E46B6
+    active:#5E46B6,
+    offset-white: #f1f2f3,
+    black-color: #000,
+    white-color: #fff,
+    offset-black: #ccc
 );
 
 //FONT-WEIGHTS
@@ -23,4 +27,8 @@ $font-weight :(
     extra-bold: 800
 );
 
+$shades :(
+    light-shade: #f1f1f1,
+    dark-shade: #b2b2b2
+)
 

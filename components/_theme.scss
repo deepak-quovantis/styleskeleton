@@ -1,0 +1,24 @@
+@import '../base/variables';
+@import '../base/mixins';
+@import '../base/theme-mixins';
+
+
+// base theme class
+
+.base {
+    &.light-theme {
+        $primary-theme: map-get($color, offset-white);
+        $theme-shades: (
+            "light-shade1": map-get($shades, light-shade),
+        );
+        @include theme($primary-theme, map-get($color, black-color), $theme-shades);
+    }
+
+    &.dark-theme {
+        $primary-theme: map-get($color, offset-black);
+        $theme-shades: (
+            "dark-shade1": map-get($shades, dark-shade),
+        );
+        @include theme($primary-theme, map-get($color, white-color), $theme-shades);
+    }
+}
