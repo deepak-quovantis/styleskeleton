@@ -1,5 +1,6 @@
 @import 'base/variables';
 @import 'vendor/fonts';
+@import 'components/buttons';
 
 *{
     margin:0;
@@ -17,18 +18,19 @@
         top:0;
         width: 300px;
         height: 100%;
-        background-color: gray;
-        padding: 30px;
+        background-color:#2d2d2d;
         ul{
-            margin:0;
+            margin:20px 0 0;
             padding: 0;
             list-style: none;
             li{
                 display: block;
                 a{  
                     text-decoration: none;
-                    font-size: 14px;
+                    font-size: 16px;
                     color:#ffffff;
+                    display: block;
+                    padding: 15px 20px;
                     &:hover{
                         text-decoration: underline;
                     }
@@ -45,7 +47,10 @@
     .topic{
         .topic-title{
             font-size: 24px;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
+            @include for-phone-only {    
+                font-size: 20px;
+            }
         }
     }
 
@@ -54,12 +59,13 @@
         border:1px solid grey;
         border-radius: 4px;
         padding:10px;
+        font-size: 14px;
     }
 }
 
 
 html,body{
-    font-family: 'Open Sans';
+    font-family: sans-serif;
 }
 
 h1{
@@ -69,3 +75,10 @@ p{
     font-weight: map-get($font-weight, light);
 }
 
+.glyph.fs1 {
+    font-size: 20px;
+    width: 45%;
+    display: inline-block;
+    padding: 10px 0;
+
+}

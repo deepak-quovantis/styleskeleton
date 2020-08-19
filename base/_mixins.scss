@@ -3,16 +3,16 @@
 {
   @if($dir == All){
     margin: $value;
-  } 
+  }
   @else if($dir == top){
     margin-top: $value;
-  } 
+  }
   @else if($dir == right){
     margin-right: $value;
-  } 
+  }
   @else if($dir == bottom){
     margin-bottom: $value;
-  } 
+  }
   @else if($dir == left){
     margin-left: $value;
   }
@@ -69,4 +69,42 @@
         font-weight: $weight;
         font-style: $style;
     }
+}
+
+
+
+// button
+
+@mixin btn($btn-padding, $btn-background, $font-size, $radius, $txtcolor, $bordercolor) {
+  padding: $btn-padding;
+  background: $btn-background;
+  font-size: $font-size;
+  border-radius: $radius;
+  color: $txtcolor;
+  border-color: $bordercolor;
+  cursor: pointer;
+  border: 0;
+}
+
+// disable button
+
+@mixin disable ($disable-background, $disable-text-color, $disable-border-color){
+  background:$disable-background ;
+  color: $disable-text-color;
+  border-color: $disable-border-color;
+  cursor: no-drop;
+}
+
+
+
+// media queries
+
+@mixin for-phone-only {
+  @media (max-width: 767px) { @content; }
+}
+@mixin for-tablet {
+  @media (max-width: 1024px) { @content; }
+}
+@mixin for-large-desktop {
+  @media (min-width: 1600px) { @content; }
 }

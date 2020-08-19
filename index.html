@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="icomoon.css" />
 </head>
 
 <body>
@@ -15,6 +16,9 @@
                 <ul>
                     <li><a href="#fontSizesSection">Font sizes</a></li>
                     <li><a href="#placeholderSection">Placeholder</a></li>
+                    <li><a href="#buttonsSection">Buttons</a></li>
+                    <li><a href="#iconsSection">Icons</a></li>
+                    <li><a href="#mediaSection">Media Querie</a></li>
                 </ul>
             </nav>
         </aside>
@@ -45,6 +49,162 @@
                     <p>Suppose we have to change the styles of placeholder in our input field, just include Placeholder
                         mixin in the input field and change the properties of placeholder accordingly.</p>
                 </section>
+            </section>
+            <hr class="hr-divider">
+
+            <section id="buttonsSection" class="topic">
+                <h1 class="topic-title">Buttons</h1>
+                    <button class="success-btn large">large btn </button>
+                    <br/>
+                    <br/>
+                    <button class="success-btn">Regular btn</button>  <button class="secondary-btn">Secondary btn</button> 
+                    <br/>
+                    <br/>
+                    <button class="cancel-btn">Cancel btn</button> <button class="success-btn" disabled>Disable Btn</button>
+                    <br/>
+                    <br/>
+                    <p>How to use</p>
+<pre class="code-snippet">
+&#60;button class="success-btn large"&#62;large btn&#60;/button&#62; <br/>
+&#60;button class="success-btn"&#62;Regular btn&#60;/button&#62; <br/>
+&#60;button class="secondary-btn"&#62;Secondary btn&#60;/button&#62; <br/> 
+&#60;button class="cancel-btn"&#62;Cancel Btn&#60;/button&#62; <br/>
+&#60;button class="success-btn" disabled&#62;Disable Btn&#60;/button&#62;
+</pre>
+<br/>
+<p>For SCSS customisation</p>
+
+<pre class="code-snippet">
+'btn' is a mixin, parameter is used in a sequence and need to be update in a same format only, sequence mentioned below -
+
+<b>@include btn(padding, background-color, font-size, border-radius, text-color, border-color)</b>
+
+<u>How to use the mixin in class</u>
+
+    .success-btn{
+        @include btn(12px 20px, map-get($color, primary), 16px, 5px, #fff, transparent);
+        &:hover{
+          background: map-get($color, primary-hover);
+        }
+      }
+
+
+Disable button parameter sequence
+
+<b>@include disable(background-color, text-color, border-color);</b>
+
+</pre>
+
+
+                    
+            </section>
+
+            <hr class="hr-divider">
+            <section id="iconsSection" class="topic">
+                <h1 class="topic-title">Icons</h1>
+
+                <div class="clearfix mhl ptl">
+                    <div class="glyph fs1">
+                        <div class="clearfix bshadow0 pbs">
+                            <span class="icon-selected"></span>
+                            <span class="mls"> icon-selected</span>
+                        </div>
+
+                    </div>
+                    <div class="glyph fs1">
+                        <div class="clearfix bshadow0 pbs">
+                            <span class="icon-action_dots"></span>
+                            <span class="mls"> icon-action_dots</span>
+                        </div>
+                    </div>
+                    <div class="glyph fs1">
+                        <div class="clearfix bshadow0 pbs">
+                            <span class="icon-arrow-right"></span>
+                            <span class="mls"> icon-arrow-right</span>
+                        </div>                       
+                    </div>
+                    <div class="glyph fs1">
+                        <div class="clearfix bshadow0 pbs">
+                            <span class="icon-close"></span>
+                            <span class="mls"> icon-close</span>
+                        </div>
+                      
+                    </div>
+                    <div class="glyph fs1">
+                        <div class="clearfix bshadow0 pbs">
+                            <span class="icon-filter"></span>
+                            <span class="mls"> icon-filter</span>
+                        </div>
+                      
+                    </div>
+                    <div class="glyph fs1">
+                        <div class="clearfix bshadow0 pbs">
+                            <span class="icon-search"></span>
+                            <span class="mls"> icon-search</span>
+                        </div>
+                       
+                    </div>
+                    <div class="glyph fs1">
+                        <div class="clearfix bshadow0 pbs">
+                            <span class="icon-sort"></span>
+                            <span class="mls"> icon-sort</span>
+                        </div>
+
+                    </div>
+                    <div class="glyph fs1">
+                        <div class="clearfix bshadow0 pbs">
+                            <span class="icon-location"></span>
+                            <span class="mls"> icon-location</span>
+                        </div>
+                       
+                    </div>
+                    <div class="glyph fs1">
+                        <div class="clearfix bshadow0 pbs">
+                            <span class="icon-men"></span>
+                            <span class="mls"> icon-men</span>
+                        </div>
+                       
+                    </div>
+                    <div class="glyph fs1">
+                        <div class="clearfix bshadow0 pbs">
+                            <span class="icon-phone"></span>
+                            <span class="mls"> icon-phone</span>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <p>How to use - </p>
+<pre class="code-snippet">
+    &#60;span class="icon-selected"&#62;&#60;/span&#62; 
+    &#60;span class="icon-action_dots"&#62;&#60;/span&#62;
+</pre>
+<p>copy the span tag and update the class name as given above</p>
+            </section>
+            <hr class="hr-divider">
+            <section id="mediaSection" class="topic">
+                <h1 class="topic-title">Media Queries</h1>
+                <p>How to use - </p>
+<pre class="code-snippet">
+For mobile phone use <b>for-phone-only</b>
+For table/Ipad use  <b>for-tablet</b>
+For Desktop use  <b>for-desktop</b>
+example given below -:
+
+
+.topic-title{
+    font-size: 24px;
+    @include for-phone-only {    
+        font-size: 20px;
+    }
+    @include for-tablet {    
+        font-size: 22px;
+    }
+    @include for-large-desktop{
+        font-size: 28px;
+    }
+}
+
+</pre>
             </section>
         </section>
     </section>
