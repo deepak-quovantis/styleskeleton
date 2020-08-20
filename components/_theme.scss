@@ -5,7 +5,7 @@
 
 // base theme class
 
-.base {
+#base {
     &.light-theme {
         $primary-theme: map-get($color, offset-white);
         $theme-shades: (

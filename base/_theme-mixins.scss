@@ -6,8 +6,6 @@
 @mixin theme($theme-name, $text-color, $theme-shades: ()) {
     .success-btn {
         background-color: $theme-name;
-        &:hover {
-            background: map-get($color, primary-hover);
-        }
+        color: $text-color;
     }
 }
