@@ -115,6 +115,10 @@ if you dont want to use any color use transparent and for any value you can pass
   cursor: no-drop;
 }
 
+#base.light-theme {
+  background-color: #e7e7e7;
+}
+
 #base.light-theme .success-btn {
   background-color: #f1f2f3;
   color: #000;
