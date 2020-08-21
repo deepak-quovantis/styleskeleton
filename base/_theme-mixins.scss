@@ -1,0 +1,11 @@
+// arguments needs to be pass
+// 1. Main theme color or background
+// 2. text color
+// 3. Themes shades
+
+@mixin theme($theme-name, $text-color, $theme-shades: ()) {
+    .success-btn {
+        background-color: $theme-name;
+        color: $text-color;
+    }
+}

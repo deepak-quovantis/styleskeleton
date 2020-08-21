@@ -10,7 +10,20 @@
 </head>
 
 <body>
-    <section class="wrapper">
+    <script>
+       function onChageTheme(theme) {
+            if (theme) {
+                var el = document.getElementById('base');
+                el.classList.add('light-theme');
+                el.classList.remove('dark-theme');
+            } else {
+                var el = document.getElementById('base');
+                el.classList.remove('light-theme');
+                el.classList.add('dark-theme');
+            }
+        }
+    </script>
+    <section id="base" class="wrapper">
         <aside class="side-nav">
             <nav>
                 <ul>
@@ -24,6 +37,7 @@
             </nav>
         </aside>
         <section class="content">
+            <button class="success-btn" style="float: right;" onclick="onChageTheme(true)">Change theme</button>
             <section id="fontSizesSection" class="topic">
                 <h1 class="topic-title">Font sizes</h1>
                 <section>

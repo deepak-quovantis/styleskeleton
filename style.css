@@ -3,31 +3,41 @@
   src: url("../fonts/OpenSans-Light.eot");
   src: url("../fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light.woff2") format("woff2"), url("../fonts/OpenSans-Light.woff") format("woff"), url("../fonts/OpenSans-Light.ttf") format("truetype"), url("../fonts/OpenSans-Light.svg#Open Sans") format("svg");
   font-weight: 300;
-  font-style: normal; }
+  font-style: normal;
+}
+
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-Regular.eot");
   src: url("../fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.ttf") format("truetype"), url("../fonts/OpenSans-Regular.svg#Open Sans") format("svg");
   font-weight: 400;
-  font-style: normal; }
+  font-style: normal;
+}
+
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-SemiBold.eot");
   src: url("../fonts/OpenSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-SemiBold.woff2") format("woff2"), url("../fonts/OpenSans-SemiBold.woff") format("woff"), url("../fonts/OpenSans-SemiBold.ttf") format("truetype"), url("../fonts/OpenSans-SemiBold.svg#Open Sans") format("svg");
   font-weight: 600;
-  font-style: normal; }
+  font-style: normal;
+}
+
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-Bold.eot");
   src: url("../fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.ttf") format("truetype"), url("../fonts/OpenSans-Bold.svg#Open Sans") format("svg");
   font-weight: 700;
-  font-style: normal; }
+  font-style: normal;
+}
+
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-ExtraBold.eot");
   src: url("../fonts/OpenSans-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-ExtraBold.woff2") format("woff2"), url("../fonts/OpenSans-ExtraBold.woff") format("woff"), url("../fonts/OpenSans-ExtraBold.ttf") format("truetype"), url("../fonts/OpenSans-ExtraBold.svg#Open Sans") format("svg");
   font-weight: 800;
-  font-style: normal; }
+  font-style: normal;
+}
+
 /* 
 'btn' is a mixin need to place values in order to add
 mixins parameter is used in a sequence and need to be update in a same format only- sequence mentioned below
@@ -43,9 +53,12 @@ if you dont want to use any color use transparent and for any value you can pass
   color: #fff;
   border-color: transparent;
   cursor: pointer;
-  border: 0; }
-  .success-btn:hover {
-    background: #ef2121; }
+  border: 0;
+}
+
+.success-btn:hover {
+  background: #ef2121;
+}
 
 .secondary-btn {
   padding: 12px 20px;
@@ -55,9 +68,12 @@ if you dont want to use any color use transparent and for any value you can pass
   color: #fff;
   border-color: transparent;
   cursor: pointer;
-  border: 0; }
-  .secondary-btn:hover {
-    background: #f9af0d; }
+  border: 0;
+}
+
+.secondary-btn:hover {
+  background: #f9af0d;
+}
 
 .cancel-btn {
   padding: 12px 20px;
@@ -68,10 +84,13 @@ if you dont want to use any color use transparent and for any value you can pass
   border-color: #4E4C70;
   cursor: pointer;
   border: 0;
-  border: 1px solid; }
-  .cancel-btn:hover {
-    background-color: rgba(94, 70, 182, 0.1);
-    border: 1px solid; }
+  border: 1px solid;
+}
+
+.cancel-btn:hover {
+  background-color: rgba(94, 70, 182, 0.1);
+  border: 1px solid;
+}
 
 .success-btn.large,
 .cancel-btn.large,
@@ -83,7 +102,8 @@ if you dont want to use any color use transparent and for any value you can pass
   color: #fff;
   border-color: transparent;
   cursor: pointer;
-  border: 0; }
+  border: 0;
+}
 
 .success-btn:disabled,
 .secondary-btn:disabled,
@@ -92,7 +112,22 @@ if you dont want to use any color use transparent and for any value you can pass
   background: rgba(193, 192, 206, 0);
   color: #C1C0CE;
   border-color: #C1C0CE;
-  cursor: no-drop; }
+  cursor: no-drop;
+}
+
+#base.light-theme {
+  background-color: #e7e7e7;
+}
+
+#base.light-theme .success-btn {
+  background-color: #f1f2f3;
+  color: #000;
+}
+
+#base.dark-theme .success-btn {
+  background-color: #000;
+  color: #fff;
+}
 
 .font-8 {
   font-size: 8px; }
@@ -226,7 +261,9 @@ if you dont want to use any color use transparent and for any value you can pass
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
 html, body {
   font-family: "Open Sans", sans-serif; }
@@ -247,44 +284,64 @@ html, body {
     font-size: 12px; }
 
 .wrapper .hr-divider {
-  margin: 30px 0; }
+  margin: 30px 0;
+}
+
 .wrapper .side-nav {
   position: fixed;
   left: 0;
   top: 0;
   width: 300px;
   height: 100%;
-  background-color: #2d2d2d; }
-  .wrapper .side-nav ul {
-    margin: 20px 0 0;
-    padding: 0;
-    list-style: none; }
-    .wrapper .side-nav ul li {
-      display: block; }
-      .wrapper .side-nav ul li a {
-        text-decoration: none;
-        font-size: 16px;
-        color: #ffffff;
-        display: block;
-        padding: 15px 20px; }
-        .wrapper .side-nav ul li a:hover {
-          text-decoration: underline; }
+  background-color: #2d2d2d;
+}
+
+.wrapper .side-nav ul {
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wrapper .side-nav ul li {
+  display: block;
+}
+
+.wrapper .side-nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #ffffff;
+  display: block;
+  padding: 15px 20px;
+}
+
+.wrapper .side-nav ul li a:hover {
+  text-decoration: underline;
+}
+
 .wrapper .content {
   margin-left: 300px;
   padding: 30px;
-  height: 100%; }
+  height: 100%;
+}
+
 .wrapper .topic .topic-title {
   font-size: 24px;
-  margin-bottom: 15px; }
-  @media (max-width: 767px) {
-    .wrapper .topic .topic-title {
-      font-size: 20px; } }
+  margin-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+  .wrapper .topic .topic-title {
+    font-size: 20px;
+  }
+}
+
 .wrapper .code-snippet {
   background-color: lightgrey;
   border: 1px solid grey;
   border-radius: 4px;
   padding: 10px;
-  font-size: 14px; }
+  font-size: 14px;
+}
 
 .fontFamilySection-p1 {
   font-family: "Open Sans", sans-serif;
@@ -294,7 +351,8 @@ html, body {
   font-family: sans-serif; }
 
 h1 {
-  font-weight: 700; }
+  font-weight: 700;
+}
 
 .fontFamilySection-p2 {
   font-family: "Open Sans", sans-serif;
@@ -304,6 +362,6 @@ h1 {
   font-size: 20px;
   width: 45%;
   display: inline-block;
-  padding: 10px 0; }
-
+  padding: 10px 0;
+}
 /*# sourceMappingURL=style.css.map */
