@@ -29,6 +29,7 @@
                 <ul>
                     <li><a href="#fontSizesSection">Font sizes</a></li>
                     <li><a href="#placeholderSection">Placeholder</a></li>
+                    <li><a href="#fontFamilySection">Font family</a></li>
                     <li><a href="#buttonsSection">Buttons</a></li>
                     <li><a href="#iconsSection">Icons</a></li>
                     <li><a href="#mediaSection">Media Querie</a></li>
@@ -46,6 +47,13 @@
                     <pre class="code-snippet">&lt;p class="font-14"&gt;Text&lt;/p&gt;</pre>
                     <p>Add a number between the above range and get desired font-size for text elements.</p>
                 </section>
+                <section style="margin-top: 15px;">
+                    <h4>Example</h4>
+                    <p class="font-13">Filter doppio, cappuccino black fair trade, strong seasonal aromatic and brewed
+                        to go latte. Milk to go, crema cultivar
+                        cup shop fair trade caffeine iced organic. Saucer dripper iced mug siphon java white in acerbic.
+                    </p>
+                </section>
             </section>
             <hr class="hr-divider" />
             <section id="placeholderSection" class="topic">
@@ -53,15 +61,54 @@
                 <section>
                     <p>How to use</p>
                     <pre class="code-snippet">
-.input-field,
-    textarea{
+.input-field{
     @include placeholder{
-    color:red;
-    font-size:12px;
+        color:red;
+        font-size:12px;
     }
 }</pre>
                     <p>Suppose we have to change the styles of placeholder in our input field, just include Placeholder
-                        mixin in the input field and change the properties of placeholder accordingly.</p>
+                        mixin in the input field (selected by class/id) and change the properties of placeholder
+                        accordingly.</p>
+                </section>
+                <section style="margin-top: 15px;">
+                    <h4>Example</h4>
+                    <input class="input-field" type="text" placeholder="Enter name" />
+                </section>
+            </section>
+            <hr class="hr-divider" />
+            <section id="fontFamilySection" class="topic">
+                <h1 class="topic-title">Font Family</h1>
+                <section>
+                    <p>How to use</p>
+                    <pre class="code-snippet">
+@include font-face("Open Sans", "../fonts/OpenSans-Light", 300);
+@include font-face("Open Sans", "../fonts/OpenSans-Regular", 400);
+@include font-face("Open Sans", "../fonts/OpenSans-SemiBold", 600);
+@include font-face("Open Sans", "../fonts/OpenSans-Bold", 700);
+@include font-face("Open Sans", "../fonts/OpenSans-ExtraBold", 800);
+                    </pre>
+                    <p>Mixin accepts 3 parameters.</p>
+                    <ul style="padding-left: 30px;">
+                        <li>Name</li>
+                        <li>Path</li>
+                        <li>Weight</li>
+                    </ul>
+                </section>
+                <section style="margin-top: 15px;">
+                    <h4>Example</h4>
+                    <p class="fontFamilySection-p1">Filter doppio, cappuccino black fair trade, strong seasonal aromatic
+                        and brewed
+                        to go latte. Milk to go, crema cultivar
+                        cup shop fair trade caffeine iced organic. Saucer dripper iced mug siphon java white in acerbic.
+                    </p>
+                    <p class="fontFamilySection-p2">Acerbic instant that organic roast skinny cortado cinnamon. Mocha
+                        acerbic cappuccino milk robusta
+                        aroma to go chicory
+                        foam blue mountain. Pumpkin spice a as, viennese crema medium, saucer, ut shop aftertaste cup
+                        shop. A, bar lungo grounds
+                        black at fair trade at seasonal americano. Cortado foam, americano, black latte est so lungo.
+                    </p>
                 </section>
             </section>
             <hr class="hr-divider">

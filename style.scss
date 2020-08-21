@@ -1,5 +1,7 @@
 @import 'base/variables';
 @import 'vendor/fonts';
+@import 'base/mixins';
+@import 'base/extends';
 @import 'components/buttons';
 @import 'components/theme';
 
@@ -7,6 +9,18 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html,body{
+    font-family: $baseFontFamily;
+}
+
+.input-field{
+    padding: 5px;
+    @include placeholder{
+        color:red;
+        font-size: 12px;
+    };
 }
 
 .wrapper{
@@ -19,6 +33,7 @@
         top:0;
         width: 300px;
         height: 100%;
+        padding: 30px;
         background-color:#2d2d2d;
         ul{
             margin:20px 0 0;
@@ -65,6 +80,11 @@
 }
 
 
+.fontFamilySection-p1{
+    font-family: $baseFontFamily;
+    font-weight: map-get($font-weight, extra-bold);
+}
+
 html,body{
     font-family: sans-serif;
 }
@@ -72,7 +92,9 @@ html,body{
 h1{
     font-weight: map-get($font-weight, bold);
 }
-p{
+
+.fontFamilySection-p2{
+    font-family: $baseFontFamily;
     font-weight: map-get($font-weight, light);
 }
 
