@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Style Skeleton</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="icomoon.css" />
 </head>
@@ -27,17 +27,25 @@
             <section id="fontSizesSection" class="topic">
                 <h1 class="topic-title">Font sizes</h1>
                 <section>
-                    <p>How to use</p>
+                    <h4>How to use</h4>
+                    <pre class="code-snippet">
+// base/_variable.scss
+
+$fontSizeRange:( 
+    min:8, //default min value (8px).
+    max:50 //default max value (50px).
+);
+                    </pre>
+                    <em>:: Set you min / max font range in "base/_variable.scss".</em>
                     <pre class="code-snippet">&lt;p class="font-x"&gt;Text&lt;/p&gt;</pre>
-                    <p>x: can be any number b/w 8-50px</p>
+                    <em>x: can be any number b/w your min / max range defined</em>
                     <pre class="code-snippet">&lt;p class="font-14"&gt;Text&lt;/p&gt;</pre>
                     <p>Add a number between the above range and get desired font-size for text elements.</p>
                 </section>
                 <section style="margin-top: 15px;">
-                    <h4>Example</h4>
-                    <p class="font-13">Filter doppio, cappuccino black fair trade, strong seasonal aromatic and brewed
-                        to go latte. Milk to go, crema cultivar
-                        cup shop fair trade caffeine iced organic. Saucer dripper iced mug siphon java white in acerbic.
+                    <h3>Working Example</h3><br>
+                    <p class="font-13">
+                        <strong>Go to Console & Try changing the numbers in my class.</strong>
                     </p>
                 </section>
             </section>
@@ -45,20 +53,20 @@
             <section id="placeholderSection" class="topic">
                 <h1 class="topic-title">Placeholder</h1>
                 <section>
-                    <p>How to use</p>
+                    <h3>How to use</h3>
+                    
                     <pre class="code-snippet">
 .input-field{
     @include placeholder{
-        color:red;
+        color:#1478FF;
         font-size:12px;
     }
 }</pre>
-                    <p>Suppose we have to change the styles of placeholder in our input field, just include Placeholder
-                        mixin in the input field (selected by class/id) and change the properties of placeholder
-                        accordingly.</p>
+                <p>Just include Placeholder mixin in the input selector (selected by class/id) and change the properties of placeholder accordingly.</p>
                 </section>
                 <section style="margin-top: 15px;">
                     <h4>Example</h4>
+                    
                     <input class="input-field" type="text" placeholder="Enter name" />
                 </section>
             </section>
@@ -66,29 +74,40 @@
             <section id="fontFamilySection" class="topic">
                 <h1 class="topic-title">Font Family</h1>
                 <section>
-                    <p>How to use</p>
-                    <pre class="code-snippet">
+                    <h3>How to use</h3>
+                   <pre class="code-snippet">
+//Light 
 @include font-face("Open Sans", "../fonts/OpenSans-Light", 300);
+
+//Regular
 @include font-face("Open Sans", "../fonts/OpenSans-Regular", 400);
+
+//Semibold
 @include font-face("Open Sans", "../fonts/OpenSans-SemiBold", 600);
+
+//Bold
 @include font-face("Open Sans", "../fonts/OpenSans-Bold", 700);
+
+//Extra Bold
 @include font-face("Open Sans", "../fonts/OpenSans-ExtraBold", 800);
                     </pre>
-                    <p>Mixin accepts 3 parameters.</p>
-                    <ul style="padding-left: 30px;">
-                        <li>Name</li>
-                        <li>Path</li>
-                        <li>Weight</li>
+                    <p>Just Copy the above code and add where you want to define a particular font.</p>
+                    <br>
+                    <h4>Mixin accepts 3 parameters.</h4>
+                    <ul style="padding-left: 30px; margin-top:10px; list-style: decimal;">
+                        <li style="line-height:25px;"><em>Font Name (e.g "open sans")</em></li>
+                        <li style="line-height:25px;"><em>Font Path (e.g "../fonts/OpenSans-Bold")</em></li>
+                        <li style="line-height:25px;"><em>Font Weight (e.g "400")</em></li>
                     </ul>
                 </section>
                 <section style="margin-top: 15px;">
-                    <h4>Example</h4>
-                    <p class="fontFamilySection-p1">Filter doppio, cappuccino black fair trade, strong seasonal aromatic
+                    <h4>Example</h4><br>
+                    <p class="fontFamilySection-p1">Bold :: Filter doppio, cappuccino black fair trade, strong seasonal aromatic
                         and brewed
                         to go latte. Milk to go, crema cultivar
                         cup shop fair trade caffeine iced organic. Saucer dripper iced mug siphon java white in acerbic.
-                    </p>
-                    <p class="fontFamilySection-p2">Acerbic instant that organic roast skinny cortado cinnamon. Mocha
+                    </p><br>
+                    <p class="fontFamilySection-p2">Light:: Acerbic instant that organic roast skinny cortado cinnamon. Mocha
                         acerbic cappuccino milk robusta
                         aroma to go chicory
                         foam blue mountain. Pumpkin spice a as, viennese crema medium, saucer, ut shop aftertaste cup
@@ -101,7 +120,7 @@
 
             <section id="buttonsSection" class="topic">
                 <h1 class="topic-title">Buttons</h1>
-                <button class="success-btn large">large btn </button>
+                <button class="success-btn large">Large btn </button>
                 <br />
                 <br />
                 <button class="success-btn">Regular btn</button> <button class="secondary-btn">Secondary btn</button>
@@ -110,7 +129,8 @@
                 <button class="cancel-btn">Cancel btn</button> <button class="success-btn" disabled>Disable Btn</button>
                 <br />
                 <br />
-                <p>How to use</p>
+                <h3>How to use</h3><br>
+                <strong>In HTML:</strong>
                 <pre class="code-snippet">
 &#60;button class="success-btn large"&#62;large btn&#60;/button&#62; <br/>
 &#60;button class="success-btn"&#62;Regular btn&#60;/button&#62; <br/>
@@ -119,21 +139,21 @@
 &#60;button class="success-btn" disabled&#62;Disable Btn&#60;/button&#62;
 </pre>
                 <br />
-                <p>For SCSS customisation</p>
+                <strong>In SCSS:</strong> <br> <br>
+                <p>Just Copy the above code and add where you want to style a particular button. </p><br><br>
+                <strong>Note:: Values shoud be added in same sequence as parameter in mixin. Sequence is mentioned below</strong>
 
                 <pre class="code-snippet">
-'btn' is a mixin, parameter is used in a sequence and need to be update in a same format only, sequence mentioned below -
 
 <b>@include btn(padding, background-color, font-size, border-radius, text-color, border-color)</b>
 
-<u>How to use the mixin in class</u>
-
-    .success-btn{
-        @include btn(12px 20px, map-get($color, primary), 16px, 5px, #fff, transparent);
-        &:hover{
-          background: map-get($color, primary-hover);
-        }
-      }
+.success-btn{
+    @include btn(12px 20px, map-get($color, primary), 16px, 5px, #fff, transparent);
+   
+    &:hover{
+        background: map-get($color, primary-hover);
+    }
+}
 
 
 Disable button parameter sequence
