@@ -85,24 +85,10 @@ html,body{
     }
 }
 
-
-.fontFamilySection-p1{
-    font-family: $baseFontFamily;
-    font-weight: map-get($font-weight, extra-bold);
-}
-
-html,body{
-    font-family: sans-serif;
-}
-
 h1{
     font-weight: map-get($font-weight, bold);
 }
 
-.fontFamilySection-p2{
-    font-family: $baseFontFamily;
-    font-weight: map-get($font-weight, light);
-}
 
 .glyph.fs1 {
     font-size: 20px;

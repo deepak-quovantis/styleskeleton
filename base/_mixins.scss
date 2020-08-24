@@ -66,7 +66,7 @@
 }
 
 // FONT-FAMILY
-@mixin font-face($font-name, $file-name, $weight, $style:normal) {
+@mixin font-face($font-name, $file-name, $style:normal) {
     @font-face {
         font-family: quote($font-name);
         src: url($file-name+".eot");
@@ -75,7 +75,6 @@
             url($file-name+".woff") format("woff"),
             url($file-name+".ttf") format("truetype"),
             url($file-name+".svg##{$font-name}") format("svg");
-        font-weight: $weight;
         font-style: $style;
     }
 }

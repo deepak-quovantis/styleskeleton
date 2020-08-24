@@ -54,7 +54,7 @@ $fontSizeRange:(
                 <h1 class="topic-title">Placeholder</h1>
                 <section>
                     <h3>How to use</h3>
-                    
+
                     <pre class="code-snippet">
 .input-field{
     @include placeholder{
@@ -62,11 +62,12 @@ $fontSizeRange:(
         font-size:12px;
     }
 }</pre>
-                <p>Just include Placeholder mixin in the input selector (selected by class/id) and change the properties of placeholder accordingly.</p>
+                    <p>Just include Placeholder mixin in the input selector (selected by class/id) and change the
+                        properties of placeholder accordingly.</p>
                 </section>
                 <section style="margin-top: 15px;">
                     <h4>Example</h4>
-                    
+
                     <input class="input-field" type="text" placeholder="Enter name" />
                 </section>
             </section>
@@ -75,39 +76,44 @@ $fontSizeRange:(
                 <h1 class="topic-title">Font Family</h1>
                 <section>
                     <h3>How to use</h3>
-                   <pre class="code-snippet">
+                    <pre class="code-snippet">
 //Light 
-@include font-face("Open Sans", "../fonts/OpenSans-Light", 300);
+@include font-face("Open Sans Light", "../fonts/OpenSans-Light");
 
 //Regular
-@include font-face("Open Sans", "../fonts/OpenSans-Regular", 400);
+@include font-face("Open Sans Regular", "../fonts/OpenSans-Regular");
 
 //Semibold
-@include font-face("Open Sans", "../fonts/OpenSans-SemiBold", 600);
+@include font-face("Open Sans SemiBold", "../fonts/OpenSans-SemiBold");
 
 //Bold
-@include font-face("Open Sans", "../fonts/OpenSans-Bold", 700);
+@include font-face("Open Sans Bold", "../fonts/OpenSans-Bold");
 
 //Extra Bold
-@include font-face("Open Sans", "../fonts/OpenSans-ExtraBold", 800);
+@include font-face("Open Sans ExtraBold", "../fonts/OpenSans-ExtraBold");
                     </pre>
-                    <p>Just Copy the above code and add where you want to define a particular font.</p>
+                    <p>Just Copy the above code and add where you want to define a external font.</p>
                     <br>
-                    <h4>Mixin accepts 3 parameters.</h4>
+                    <h4>Mixin accepts 2 parameters.</h4>
                     <ul style="padding-left: 30px; margin-top:10px; list-style: decimal;">
                         <li style="line-height:25px;"><em>Font Name (e.g "open sans")</em></li>
                         <li style="line-height:25px;"><em>Font Path (e.g "../fonts/OpenSans-Bold")</em></li>
-                        <li style="line-height:25px;"><em>Font Weight (e.g "400")</em></li>
                     </ul>
+                    <br>
+                    <p>After font family is defined, use the following classes on text elements to add font-family.</p>
+                    <pre
+                        class="code-snippet">.font-regular, .font-light, .font-semibold, .font-bold, .font-extrabold</pre>
                 </section>
                 <section style="margin-top: 15px;">
                     <h4>Example</h4><br>
-                    <p class="fontFamilySection-p1">Bold :: Filter doppio, cappuccino black fair trade, strong seasonal aromatic
+                    <p class="font-semibold">SemiBold :: Filter doppio, cappuccino black fair trade, strong seasonal
+                        aromatic
                         and brewed
                         to go latte. Milk to go, crema cultivar
                         cup shop fair trade caffeine iced organic. Saucer dripper iced mug siphon java white in acerbic.
                     </p><br>
-                    <p class="fontFamilySection-p2">Light:: Acerbic instant that organic roast skinny cortado cinnamon. Mocha
+                    <p class="font-light">Light:: Acerbic instant that organic roast skinny
+                        cortado cinnamon. Mocha
                         acerbic cappuccino milk robusta
                         aroma to go chicory
                         foam blue mountain. Pumpkin spice a as, viennese crema medium, saucer, ut shop aftertaste cup
@@ -141,7 +147,8 @@ $fontSizeRange:(
                 <br />
                 <strong>In SCSS:</strong> <br> <br>
                 <p>Just Copy the above code and add where you want to style a particular button. </p><br><br>
-                <strong>Note:: Values shoud be added in same sequence as parameter in mixin. Sequence is mentioned below</strong>
+                <strong>Note:: Values shoud be added in same sequence as parameter in mixin. Sequence is mentioned
+                    below</strong>
 
                 <pre class="code-snippet">
 
