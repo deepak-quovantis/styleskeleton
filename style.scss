@@ -111,3 +111,24 @@ h1{
     padding: 10px 0;
 
 }
+
+.custom-box{
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    &.custom-box-1{
+        @include border(2px,solid,black);
+    }
+    &.custom-box-2{
+        @include border(2px,solid,black,top);
+    }
+    &.custom-box-3{
+        @include border(2px,solid,black,left);
+    }
+    &.custom-box-4{
+        @include border(2px,solid,black,right);
+    }
+    &.custom-box-5{
+        @include border(2px,solid,black,bottom);
+    }
+}
