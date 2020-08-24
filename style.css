@@ -324,8 +324,9 @@ h1 {
   padding: 10px 0; }
 
 .custom-box {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
   background-color: lightblue; }
   .custom-box.custom-box-1 {
     border: 2px solid black; }

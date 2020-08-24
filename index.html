@@ -297,23 +297,42 @@ example given below -:
 To add direction
 <b>@include border(1px,solid,#cdcdcd,top/left/right/bottom);</b>
 
-<b>Mixin accepts 4 parameters.</b>
-<ul style="padding-left: 30px; margin-top:10px; list-style: decimal;">
-<li style="line-height:0px;"><em>Width</em></li>
-<li style="line-height:0px;"><em>Border style</em></li>
-<li style="line-height:0px;"><em>Color</em></li>
-<li style="line-height:0px;"><em>Direction</em></li>
-</ul>
-<p><b>NOTE:</b>By default direction parameter has <b>All</b> value, i.e Borders will applied on all 4 sides.</p></pre>
+<p><b>NOTE:</b>By default direction parameter has <b>All</b> value, i.e Borders will applied on all 4 sides.</p>
+</pre>
+                    </pre>
+
+                    <b>Mixin accepts 4 parameters.</b>
+                    <ul style="padding-left: 30px; margin-top:10px; list-style: decimal;">
+                        <li style="line-height:25px;"><em>Width</em></li>
+                        <li style="line-height:25px;"><em>Border style</em></li>
+                        <li style="line-height:25px;"><em>Color</em></li>
+                        <li style="line-height:25px;"><em>Direction(optional)</em></li>
+                    </ul>
+
                 </section>
                 <section style="margin-top: 15px;">
                     <h3>Working Example</h3><br>
                     <div style="display: flex;justify-content: space-between;">
-                        <div class="custom-box custom-box-1"></div>
-                        <div class="custom-box custom-box-2"></div>
-                        <div class="custom-box custom-box-3"></div>
-                        <div class="custom-box custom-box-4"></div>
-                        <div class="custom-box custom-box-5"></div>
+                        <div>
+                            <div class="custom-box custom-box-1"></div>
+                            <p>@include border(1px,solid,black);</p>
+                        </div>
+                        <div>
+                            <div class="custom-box custom-box-2"></div>
+                            <p>@include border(1px,solid,black,top);</p>
+                        </div>
+                        <div>
+                            <div class="custom-box custom-box-3"></div>
+                            <p>@include border(1px,solid,black,left);</p>
+                        </div>
+                        <div>
+                            <div class="custom-box custom-box-4"></div>
+                            <p>@include border(1px,solid,black,right);</p>
+                        </div>
+                        <div>
+                            <div class="custom-box custom-box-5"></div>
+                            <p>@include border(1px,solid,black,bottom);</p>
+                        </div>
                     </div>
                 </section>
             </section>
