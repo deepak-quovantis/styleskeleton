@@ -11,7 +11,7 @@
 
 <body>
     <script>
-       function onChageTheme(theme) {
+        function onChangeTheme(theme) {
             if (theme) {
                 var el = document.getElementById('base');
                 el.classList.add('light-theme');
@@ -37,7 +37,7 @@
             </nav>
         </aside>
         <section class="content">
-            <button class="success-btn" style="float: right;" onclick="onChageTheme(true)">Change theme</button>
+            <button class="success-btn" style="float: right;" onclick="onChangeTheme(true)">Change theme</button>
             <section id="fontSizesSection" class="topic">
                 <h1 class="topic-title">Font sizes</h1>
                 <section>
@@ -68,7 +68,7 @@ $fontSizeRange:(
                 <h1 class="topic-title">Placeholder</h1>
                 <section>
                     <h3>How to use</h3>
-                    
+
                     <pre class="code-snippet">
 .input-field{
     @include placeholder{
@@ -76,11 +76,12 @@ $fontSizeRange:(
         font-size:12px;
     }
 }</pre>
-                <p>Just include Placeholder mixin in the input selector (selected by class/id) and change the properties of placeholder accordingly.</p>
+                    <p>Just include Placeholder mixin in the input selector (selected by class/id) and change the
+                        properties of placeholder accordingly.</p>
                 </section>
                 <section style="margin-top: 15px;">
                     <h4>Example</h4>
-                    
+
                     <input class="input-field" type="text" placeholder="Enter name" />
                 </section>
             </section>
@@ -89,7 +90,7 @@ $fontSizeRange:(
                 <h1 class="topic-title">Font Family</h1>
                 <section>
                     <h3>How to use</h3>
-                   <pre class="code-snippet">
+                    <pre class="code-snippet">
 //Light 
 @include font-face("Open Sans", "../fonts/OpenSans-Light", 300);
 
@@ -116,12 +117,14 @@ $fontSizeRange:(
                 </section>
                 <section style="margin-top: 15px;">
                     <h4>Example</h4><br>
-                    <p class="fontFamilySection-p1">Bold :: Filter doppio, cappuccino black fair trade, strong seasonal aromatic
+                    <p class="fontFamilySection-p1">Bold :: Filter doppio, cappuccino black fair trade, strong seasonal
+                        aromatic
                         and brewed
                         to go latte. Milk to go, crema cultivar
                         cup shop fair trade caffeine iced organic. Saucer dripper iced mug siphon java white in acerbic.
                     </p><br>
-                    <p class="fontFamilySection-p2">Light:: Acerbic instant that organic roast skinny cortado cinnamon. Mocha
+                    <p class="fontFamilySection-p2">Light:: Acerbic instant that organic roast skinny cortado cinnamon.
+                        Mocha
                         acerbic cappuccino milk robusta
                         aroma to go chicory
                         foam blue mountain. Pumpkin spice a as, viennese crema medium, saucer, ut shop aftertaste cup
@@ -155,7 +158,8 @@ $fontSizeRange:(
                 <br />
                 <strong>In SCSS:</strong> <br> <br>
                 <p>Just Copy the above code and add where you want to style a particular button. </p><br><br>
-                <strong>Note:: Values shoud be added in same sequence as parameter in mixin. Sequence is mentioned below</strong>
+                <strong>Note:: Values shoud be added in same sequence as parameter in mixin. Sequence is mentioned
+                    below</strong>
 
                 <pre class="code-snippet">
 
@@ -282,6 +286,77 @@ example given below -:
     }
     @include for-large-desktop{
         font-size: 28px;
+    }
+}
+
+</pre>
+            </section>
+
+            <section id="themeSection" class="topic">
+                <h1 class="topic-title">Theme</h1>
+                <p>How to use - </p>
+                <pre class="code-snippet">
+You need to change the theme classes at root level with the help of javascript code-
+
+Example to change:  
+
+function onChangeTheme(theme) {
+    if (theme) {
+        var el = document.getElementById('base');
+        el.classList.add('light-theme');
+        el.classList.remove('dark-theme');
+    } else {
+        var el = document.getElementById('base');
+        el.classList.remove('light-theme');
+        el.classList.add('dark-theme');
+    }
+}  
+<strong>OR</strong>
+ 
+You can write your own code.
+
+<strong>Background color change example</strong>
+
+#base {
+    &.light-theme {
+        background-color: #e7e7e7;
+    }
+    &.dark-theme {
+        background-color: #000;
+    }
+}
+
+
+
+<strong>You need to declare the color pallet for light and dark theme</strong>
+
+#base {
+    &.light-theme {
+        background-color: #e7e7e7;
+        $primary-theme: map-get($color, offset-white);
+        $theme-shades: (
+            "light-shade1": map-get($shades, light-shade),
+        );
+        @include theme($primary-theme, map-get($color, black-color), $theme-shades);
+    }
+
+    &.dark-theme {
+        $primary-theme: map-get($color, offset-black);
+        $theme-shades: (
+            "dark-shade1": map-get($shades, dark-shade),
+        );
+        @include theme($primary-theme, map-get($color, white-color), $theme-shades);
+    }
+}
+
+Add css to below method to change theme of any element:
+
+<strong>Button color change CSS:</strong>
+
+@mixin theme($theme-name, $text-color, $theme-shades: ()) {
+    .success-btn {
+        background-color: $theme-name;
+        color: $text-color;
     }
 }
 

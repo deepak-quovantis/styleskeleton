@@ -1,7 +1,9 @@
 {
-"version": 3,
-"mappings": "",
-"sources": [],
-"names": [],
-"file": "menus.css"
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "menus.scss"
+    ],
+    "names": [],
+    "file": "menus.css"
 }
